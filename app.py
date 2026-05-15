@@ -8,6 +8,8 @@ from router import get_route
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python" # FIX: Avoid protobuf C++ implementation issues in certain environments.
+
 # Load environment variables
 load_dotenv()
 
